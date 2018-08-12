@@ -2,6 +2,7 @@
 @import "_hamburger.sass"
 @import "_buttons.sass"
 @import "_hover.sass"
+@import "_menu.sass"
 
 
 body
@@ -16,7 +17,7 @@ body
     color: $white-color
     position: relative
     img
-      padding: 36px 40px 0px 0px
+      padding: 20px 0 0px 0px
     h1
       font-size: 200px
       font-weight: 900
@@ -135,23 +136,38 @@ body
           background-image: url(../img/testimonial-1x.png) 
           background-repeat: no-repeat
           background-position: left
+          .typo
+            transform: rotate(-90deg)
+          .typo-text
+            color: $white-color
+            position: absolute
+            top: 241px
+            left: -551px
+            font-size: 80px
+            font-weight: 400
+            line-height: 100px
+            letter-spacing: -4px
+          .typo-img
+            position: absolute
+            top: -27px
+            left: -500px
+          .play_button_circle
+            position: absolute
+            top: 260px
+            right: 798px
+            width: 65px
+            height: 65px
+            border: 1px solid #fff
+            border-radius: 50%
+            background-color: #fff
+            padding: 21px 22px
+            transition: transform .2s
+            transform: rotate(90deg)
+            cursor: pointer
+            &:hover
+              transform: rotate(90deg)
       .graphic
         height: 100%
-        .typo
-          transform: rotate(-90deg)
-        .typo-text
-          color: $white-color
-          position: absolute
-          top: -132px
-          left: -338px
-          font-size: 80px
-          font-weight: 400
-          line-height: 100px
-          letter-spacing: -4px
-        .typo-img
-          position: absolute
-          top: -27px
-          left: -500px
         .elements
           position: relative
           &-first-block
@@ -190,16 +206,4 @@ body
             top: 550px
             right: 15px
             position: absolute
-        .play_button_circle
-          position: absolute
-          top: 450px
-          right: 276px
-          width: 65px
-          height: 65px
-          border: 1px solid #fff
-          border-radius: 50%
-          background-color: #fff
-          padding: 21px 22px
-          transition: transform .2s
-          &:hover
-            transform: scale(1.05)
+        

@@ -1,85 +1,49 @@
-#menuToggle {
-  display: block;
-  position: absolute;
-  top: 50px;
-  right: 50px;
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
   z-index: 1;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-  #menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0;
-    z-index: 2;
-    -webkit-touch-callout: none; }
-  #menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #ffffff;
-    border-radius: 3px;
-    z-index: 1;
-    -webkit-transform-origin: 4px 0px;
-    transform-origin: 4px 0px;
-    transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
-    #menuToggle span:first-child {
-      -webkit-transform-origin: 0% 0%;
-      transform-origin: 0% 0%; }
-    #menuToggle span:nth-last-child(2) {
-      -webkit-transform-origin: 0% 100%;
-      transform-origin: 0% 100%; }
-  #menuToggle input:checked ~ span {
-    opacity: 1;
-    -webkit-transform: rotate(45deg) translate(-2px, -1px);
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #000000; }
-    #menuToggle input:checked ~ span:nth-last-child(3) {
-      opacity: 0;
-      -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-      transform: rotate(0deg) scale(0.2, 0.2); }
-    #menuToggle input:checked ~ span:nth-last-child(2) {
-      opacity: 1;
-      -webkit-transform: rotate(-45deg) translate(0, -1px);
-      transform: rotate(-45deg) translate(0, -1px); }
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s; }
 
-#menu {
+.overlay-content {
+  position: relative;
+  top: 10%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px; }
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Poppins - Semi Bold";
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 100px;
+  display: block;
+  transition: 0.3s; }
+
+.overlay a:hover, .overlay a:focus {
+  color: #7443ff; }
+
+.overlay .closebtn {
   position: absolute;
-  width: 300px;
-  margin: -100px 0 0 0;
-  padding: 50px;
-  padding-top: 125px;
-  right: -45px;
-  background: #ededed;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  -webkit-transform-origin: 0% 0%;
-  transform-origin: 0% 0%;
-  -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0);
-  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+  top: 20px;
+  right: 45px;
+  font-size: 60px; }
 
-li {
-  padding: 10px 0;
-  font-size: 22px;
-  text-align: left; }
+.hamburger-button {
+  font-size: 45px;
+  cursor: pointer; }
 
-#menuToggle input:checked ~ ul {
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-  opacity: 1; }
+.social a {
+  display: inline;
+  font-size: 24px; }
 
 .button {
   background: transparent;
@@ -190,6 +154,25 @@ li {
   -webkit-transform: scale(2);
   transform: scale(2); }
 
+menu {
+  margin-top: 150px; }
+  menu ul {
+    list-style: none; }
+    menu ul li {
+      display: inline;
+      margin: 0 15px 0; }
+      menu ul li a {
+        font-family: Poppins;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 100px;
+        color: #818586;
+        letter-spacing: -0.9px;
+        text-decoration: none; }
+      menu ul li a:active, menu ul li a:hover {
+        color: #2a2d2e;
+        text-decoration: none; }
+
 body {
   background-color: #ffffff;
   font-family: 'Poppins', sans-serif;
@@ -201,7 +184,7 @@ body {
     color: #ffffff;
     position: relative; }
     body header img {
-      padding: 36px 40px 0px 0px; }
+      padding: 20px 0 0px 0px; }
     body header h1 {
       font-size: 200px;
       font-weight: 900;
@@ -319,23 +302,38 @@ body {
           background-image: url(../img/testimonial-1x.png);
           background-repeat: no-repeat;
           background-position: left; }
+          body .section-two .image .background-img .video-img .typo {
+            transform: rotate(-90deg); }
+          body .section-two .image .background-img .video-img .typo-text {
+            color: #ffffff;
+            position: absolute;
+            top: 241px;
+            left: -551px;
+            font-size: 80px;
+            font-weight: 400;
+            line-height: 100px;
+            letter-spacing: -4px; }
+          body .section-two .image .background-img .video-img .typo-img {
+            position: absolute;
+            top: -27px;
+            left: -500px; }
+          body .section-two .image .background-img .video-img .play_button_circle {
+            position: absolute;
+            top: 260px;
+            right: 798px;
+            width: 65px;
+            height: 65px;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            background-color: #fff;
+            padding: 21px 22px;
+            transition: transform .2s;
+            transform: rotate(90deg);
+            cursor: pointer; }
+            body .section-two .image .background-img .video-img .play_button_circle:hover {
+              transform: rotate(90deg); }
       body .section-two .image .graphic {
         height: 100%; }
-        body .section-two .image .graphic .typo {
-          transform: rotate(-90deg); }
-        body .section-two .image .graphic .typo-text {
-          color: #ffffff;
-          position: absolute;
-          top: -132px;
-          left: -338px;
-          font-size: 80px;
-          font-weight: 400;
-          line-height: 100px;
-          letter-spacing: -4px; }
-        body .section-two .image .graphic .typo-img {
-          position: absolute;
-          top: -27px;
-          left: -500px; }
         body .section-two .image .graphic .elements {
           position: relative; }
           body .section-two .image .graphic .elements-first-block {
@@ -374,16 +372,3 @@ body {
             top: 550px;
             right: 15px;
             position: absolute; }
-        body .section-two .image .graphic .play_button_circle {
-          position: absolute;
-          top: 450px;
-          right: 276px;
-          width: 65px;
-          height: 65px;
-          border: 1px solid #fff;
-          border-radius: 50%;
-          background-color: #fff;
-          padding: 21px 22px;
-          transition: transform .2s; }
-          body .section-two .image .graphic .play_button_circle:hover {
-            transform: scale(1.05); }

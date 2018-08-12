@@ -18,7 +18,32 @@
 
 
   <header>
-    <div class="row">
+    <div class="row align-items-center">
+      <div id="Navigation" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Services</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+          <div class="social">
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-dribbble"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-behance"></i>
+          </a>
+        </div>
+        </div>
+      </div>
       <div class="col">
         <div class="row justify-content-around">
           <div class="col logo">
@@ -26,32 +51,8 @@
               <img src="img/logo.png" alt="logo">
             </a>
           </div>
-          <div class="col hamburger">
-            <nav role='navigation'>
-              <div id="menuToggle">
-                <input type="checkbox" />
-                <span></span>
-                <span></span>
-                <span></span>
-                <ul id="menu">
-                  <a href="#">
-                    <li>Home</li>
-                  </a>
-                  <a href="#">
-                    <li>About</li>
-                  </a>
-                  <a href="#">
-                    <li>Info</li>
-                  </a>
-                  <a href="#">
-                    <li>Contact</li>
-                  </a>
-                  <a href="https://erikterwan.com/" target="_blank">
-                    <li>Show me more</li>
-                  </a>
-                </ul>
-              </div>
-            </nav>
+          <div class="col d-flex justify-content-end">
+            <span class="hamburger-button" onclick="openNav()">&#9776;</span>
           </div>
         </div>
         <h1>I am Cesis</h1>
@@ -107,14 +108,22 @@
     <div class="row">
       <div class="col-7 right-block image">
         <div class="row background-img">
-          <div class="col-8 video-img"></div>
-          <div class="col-4">
-            <div class="row graphic">
-              <div class="col-6">
-                <div class="typo">
+          <div class="col-8 video-img">
+            <div class="typo">
+              <div class="row">
+                <div class="col-8"></div>
+                <div class="col-4">
                   <div class="typo-text">video</div>
+                  <div class="play_button_circle hvr-radial-out">
+                    <i class="fas fa-play "></i>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="row graphic">
+              <div class="col-6"></div>
               <div class="col-6 elements">
                 <div class="row">
                   <div class="col">
@@ -125,9 +134,6 @@
                     <div class="elements-third-block"></div>
                     <div class="elements-fourth-block"></div>
                     <div class="elements-fifth-block hvr-curl-bottom-right"></div>
-                    <div class="play_button_circle hvr-radial-out">
-                        <i class="fas fa-play "></i>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -149,8 +155,37 @@
 
     </div>
   </section>
-  <section></section>
-  <menu></menu>
+  <menu>
+    <ul>
+      <li>
+        <a href="#">All </a>
+      </li>
+      <li>
+        <a href="#">Web</a>
+      </li>
+      <li>
+        <a href="#">Design</a>
+      </li>
+      <li>
+        <a href="#">Interaction</a>
+      </li>
+      <li>
+        <a href="#">Applications</a>
+      </li>
+      <li>
+        <a href="#">Branding</a>
+      </li>
+      <li>
+        <a href="#">Graphic</a>
+      </li>
+      <li>
+        <a href="#">Design</a>
+      </li>
+      <li>
+        <a href="#">Photography</a>
+      </li>
+    </ul>
+  </menu>
   <section></section>
   <section></section>
   <section></section>
