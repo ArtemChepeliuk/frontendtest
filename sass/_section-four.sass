@@ -1,0 +1,123 @@
+.section-four
+  margin: 135px 0
+  padding: 0 8%
+  .keep-in
+    text-align: left
+    h3
+      font-family: "Poppins - Semi Bold"
+      font-size: 24px
+      font-weight: 400
+      line-height: 100px
+      text-transform: uppercase
+      letter-spacing: 2.64px
+      color: $purple-color
+    h1
+      font-family: "Poppins - Semi Bold"
+      font-size: 80px
+      font-weight: 400
+      line-height: 100px
+      letter-spacing: -4px
+    p
+      font-family: Poppins
+      font-size: 18px
+      font-weight: 300
+      line-height: 30px
+  .form
+    .inp
+      input
+        display: block
+        width: 100%
+        border: none
+        border-bottom: 1px solid rgba(102, 102, 102, 0.3)
+        padding: 25px 0px 30px 
+        &:focus, &:active
+          outline: none
+          border-bottom: 1px solid $purple-color 
+        &:focus + .fas
+          color: rgba(116, 67, 255, 0.5)
+      i 
+        width: 26px
+        height: 26px
+        line-height: 26px
+        text-align: right
+        margin-top: -51px
+        position: relative
+        z-index: 1
+        float: right
+      i + input 
+        padding-left: 26px
+      
+    .check
+      text-align: left
+      margin-top: 20px
+      input
+        &[type="checkbox"]
+          &:checked, &:not(:checked)
+            position: absolute
+            left: -9999px
+        &[type="checkbox"]
+          &:checked + label
+            display: inline-block
+            position: relative
+            font-family: Poppins
+            font-size: 14px
+            font-weight: 600
+            padding-left: 45px
+            line-height: 20px
+            cursor: pointer
+          &:not(:checked) + label
+            display: inline-block
+            position: relative
+            font-family: Poppins
+            font-size: 14px
+            font-weight: 400
+            padding-left: 45px
+            line-height: 20px
+            cursor: pointer
+        &[type="checkbox"]
+          &:checked + label:before, &:not(:checked) + label:before
+            content: ""
+            position: absolute
+            left: 0px
+            top: 0px
+            width: 26px
+            height: 26px
+            border: 1px solid $purple-color
+          &:not(:checked) + label:before
+            content: ""
+            position: absolute
+            left: 0px
+            top: 0px
+            width: 26px
+            height: 26px
+            border: 1px solid #d1d1d1
+        &[type="checkbox"]
+          &:checked + label:before, &:not(:checked) + label:before
+            border-radius: 2px
+        &[type="checkbox"]
+          &:checked + label:after, &:not(:checked) + label:after
+            content: ""
+            position: absolute
+            -webkit-transition: all 0.2s ease
+            -moz-transition: all 0.2s ease
+            -o-transition: all 0.2s ease
+            transition: all 0.2s ease
+
+        &[type="checkbox"]
+          &:checked + label:after, &:not(:checked) + label:after
+            left: 4px
+            top: 5px
+            width: 19px
+            height: 12px
+            border-radius: 1px
+            border-left: 4px solid $purple-color
+            border-bottom: 4px solid $purple-color
+            -webkit-transform: rotate(-45deg)
+            -moz-transform: rotate(-45deg)
+            -o-transform: rotate(-45deg)
+            -ms-transform: rotate(-45deg)
+            transform: rotate(-45deg)
+        &[type="checkbox"]:not(:checked) + label:after
+          opacity: 0
+        &[type="checkbox"]:checked + label:after
+          opacity: 1
