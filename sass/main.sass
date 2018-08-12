@@ -1,5 +1,7 @@
 @import "variables.sass"
 @import "_hamburger.sass"
+@import "_buttons.sass"
+@import "_hover.sass"
 
 
 body
@@ -17,52 +19,13 @@ body
       padding: 36px 40px 0px 0px
     h1
       font-size: 200px
-      font-weight: 700
+      font-weight: 900
       margin-top: 300px
     h3
       font-size: 36px
     .logo 
       text-align: left
       padding-left: 50px
-    .button
-      background: transparent
-      border-radius: 50px
-      padding: 15px 30px
-      font-size: 12px
-      cursor: pointer
-      margin-top: 10px
-      text-transform: uppercase
-    .white-button
-      border: $white-border
-      color: $white-color
-    .black-button
-      border: $black-border
-      color: $black-color
-    .button-hover 
-      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1)
-      -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
-      transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
-      &:after 
-        content: ""
-        border-radius: 50px
-        position: absolute
-        z-index: -1
-        top: 0
-        left: 0
-        width: 100%
-        height: 100%
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
-        opacity: 0
-        -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
-        transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1)
-      &:hover 
-        -webkit-transform: scale(1.25, 1.25)
-        transform: scale(1.25, 1.25)
-      &:hover:after
-        opacity: 1
-      &:focus
-        outline: none
-
     .slide-down
       margin: 250px 0 50px
       a
@@ -74,6 +37,169 @@ body
             -webkit-transform: scale(1.3)
             -ms-transform: scale(1.3)
             transform: scale(1.3)
-  .section-one  
-
-
+  .section-one 
+    margin-top: 160px
+    .text
+      padding: 0 150px 0 180px 
+      text-align: left
+      h1
+        font-size: 60px
+        font-weight: 700
+    .image
+      background-image: url(../img/creative-slide-small-3.jpg) 
+      background-repeat: no-repeat
+      background-position: center
+      height: 650px
+      .background-img
+        height: 650px
+        background: -moz-linear-gradient(left,  rgba(168,237,234,0) 45%, rgba(168,237,234,0.02) 46%, rgba(254,214,227,1) 100%)
+        background: -webkit-linear-gradient(left,  rgba(168,237,234,0) 45%,rgba(168,237,234,0.02) 46%,rgba(254,214,227,1) 100%)
+        background: linear-gradient(to right,  rgba(168,237,234,0) 45%,rgba(168,237,234,0.02) 46%,rgba(254,214,227,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00a8edea', endColorstr='#fed6e3',GradientType=1 )
+      .graphic
+        height: 100%
+        .typo
+          transform: rotate(-90deg)
+        .typo-text
+          color: $white-color
+          position: absolute
+          top: 0
+          left: -226px
+          font-size: 80px
+          font-weight: 400
+          line-height: 100px
+          letter-spacing: -4px
+        .typo-img
+          position: absolute
+          top: -27px
+          left: -500px
+        .elements
+          position: relative
+          &-first-block
+            position: absolute
+            top: 50px
+            left: 85px
+            width: 192px
+            height: 109px  
+            background-image: $element-background 
+          &-second-block
+            position: absolute
+            width: 93px
+            height: 53px 
+            top: 159px
+            left: -7px
+            background-image: $element-background 
+          &-third-block
+            position: absolute
+            width: 98px
+            height: 98px 
+            top: 550px
+            right: 15px
+            background: $white-color 
+          &-fourth-block
+            position: absolute
+            width: 98px
+            height: 98px 
+            top: 452px
+            right: 112px
+            background: $white-color 
+  .section-two
+    margin-top: 160px
+    .text
+      padding: 0 150px 0 180px 
+      text-align: left
+      .main-text
+        color: #2a2d2e
+        font-family: Poppins
+        font-size: 18px
+        font-weight: 300
+        line-height: 30px
+      p 
+        color: #72787a
+        font-family: Poppins
+        font-size: 14px
+        font-weight: 400
+        line-height: 24px
+      h1
+        font-size: 60px
+        font-weight: 700
+    .image
+      height: 650px
+      .background-img
+        height: 650px
+        background: -moz-linear-gradient(left,  rgba(254,214,227,0) 45%, rgba(168,237,234,1) 100%)
+        background: -webkit-linear-gradient(left,  rgba(254,214,227,0) 45%,rgba(168,237,234,1) 100%)
+        background: linear-gradient(to right,  rgba(254,214,227,0) 45%,rgba(168,237,234,1) 100%)
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fed6e3', endColorstr='#a8edea',GradientType=1 )
+        .video-img
+          background-image: url(../img/testimonial-1x.png) 
+          background-repeat: no-repeat
+          background-position: left
+      .graphic
+        height: 100%
+        .typo
+          transform: rotate(-90deg)
+        .typo-text
+          color: $white-color
+          position: absolute
+          top: -132px
+          left: -338px
+          font-size: 80px
+          font-weight: 400
+          line-height: 100px
+          letter-spacing: -4px
+        .typo-img
+          position: absolute
+          top: -27px
+          left: -500px
+        .elements
+          position: relative
+          &-first-block
+            position: absolute
+            top: 123px
+            left: -34px
+            width: 192px
+            height: 109px  
+            background-image: $element-background 
+          &-second-block
+            position: absolute
+            width: 93px
+            height: 53px 
+            top: 232px
+            left: -127px
+            background-image: $element-background 
+          &-third-block
+            position: absolute
+            width: 98px
+            height: 98px 
+            top: 548px
+            right: 8px
+            background-color: #7443ff
+          &-fourth-block
+            width: 70px
+            height: 70px
+            top: 475px
+            right: 118px
+            background: transparent
+            border: 2px solid $white-color
+            position: absolute
+          &-fifth-block
+            background-image: url(../img/Elements12.png)
+            width: 89px
+            height: 89px
+            top: 550px
+            right: 15px
+            position: absolute
+        .play_button_circle
+          position: absolute
+          top: 450px
+          right: 276px
+          width: 65px
+          height: 65px
+          border: 1px solid #fff
+          border-radius: 50%
+          background-color: #fff
+          padding: 21px 22px
+          transition: transform .2s
+          &:hover
+            transform: scale(1.05)

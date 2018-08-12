@@ -1,0 +1,68 @@
+.hvr-curl-bottom-right 
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px transparent
+  position: relative
+
+.hvr-curl-bottom-right:before 
+  pointer-events: none
+  position: absolute
+  content: ''
+  height: 0
+  width: 0
+  bottom: 0
+  right: 0
+  background: #7443ff
+  /* IE9 */
+  background: linear-gradient(315deg, #7443ff 45%, #aaa 50%, #ccc 56%, white 80%)
+  box-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4)
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  -webkit-transition-property: width, height
+  transition-property: width, height
+
+.hvr-curl-bottom-right:hover:before, .hvr-curl-bottom-right:focus:before, .hvr-curl-bottom-right:active:before 
+  width: 25px
+  height: 25px
+
+.hvr-radial-out 
+  display: inline-block
+  vertical-align: middle
+  -webkit-transform: perspective(1px) translateZ(0)
+  transform: perspective(1px) translateZ(0)
+  box-shadow: 0 0 1px transparent
+  position: relative
+  overflow: hidden
+  background: #e1e1e1
+  -webkit-transition-property: color
+  transition-property: color
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+
+.hvr-radial-out:before 
+  content: ""
+  position: absolute
+  z-index: -1
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: #2098D1
+  border-radius: 100%
+  -webkit-transform: scale(0)
+  transform: scale(0)
+  -webkit-transition-property: transform
+  transition-property: transform
+  -webkit-transition-duration: 0.3s
+  transition-duration: 0.3s
+  -webkit-transition-timing-function: ease-out
+  transition-timing-function: ease-out
+
+.hvr-radial-out:hover, .hvr-radial-out:focus, .hvr-radial-out:active 
+  color: white
+
+.hvr-radial-out:hover:before, .hvr-radial-out:focus:before, .hvr-radial-out:active:before 
+  -webkit-transform: scale(2)
+  transform: scale(2)
