@@ -451,8 +451,8 @@ menu {
     position: relative;
     z-index: 1;
     float: right; }
-  .section-four .form .inp i + input {
-    padding-left: 26px; }
+    .section-four .form .inp i + input {
+      padding-left: 26px; }
   .section-four .form .check {
     text-align: left;
     margin-top: 20px; }
@@ -477,7 +477,7 @@ menu {
       padding-left: 45px;
       line-height: 20px;
       cursor: pointer; }
-    .section-four .form .check input[type="checkbox"]:checked + label:before, .section-four .form .check input[type="checkbox"]:not(:checked) + label:before {
+    .section-four .form .check input[type="checkbox"]:checked + label:before {
       content: "";
       position: absolute;
       left: 0px;
@@ -486,6 +486,13 @@ menu {
       height: 26px;
       border: 1px solid #7443ff; }
     .section-four .form .check input[type="checkbox"]:not(:checked) + label:before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      width: 26px;
+      height: 26px;
+      border: 1px solid #7443ff;
       content: "";
       position: absolute;
       left: 0px;
@@ -502,7 +509,7 @@ menu {
       -moz-transition: all 0.2s ease;
       -o-transition: all 0.2s ease;
       transition: all 0.2s ease; }
-    .section-four .form .check input[type="checkbox"]:checked + label:after, .section-four .form .check input[type="checkbox"]:not(:checked) + label:after {
+    .section-four .form .check input[type="checkbox"]:checked + label:after {
       left: 4px;
       top: 5px;
       width: 19px;
@@ -516,6 +523,18 @@ menu {
       -ms-transform: rotate(-45deg);
       transform: rotate(-45deg); }
     .section-four .form .check input[type="checkbox"]:not(:checked) + label:after {
+      left: 4px;
+      top: 5px;
+      width: 19px;
+      height: 12px;
+      border-radius: 1px;
+      border-left: 4px solid #7443ff;
+      border-bottom: 4px solid #7443ff;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      transform: rotate(-45deg);
       opacity: 0; }
     .section-four .form .check input[type="checkbox"]:checked + label:after {
       opacity: 1; }
@@ -555,12 +574,12 @@ menu {
       font-size: 14px;
       font-weight: 400;
       line-height: 24px; }
-    .social-links-elem i {
-      color: #ffffff;
-      font-size: 30px;
-      font-weight: 400;
-      line-height: 34px;
-      text-transform: uppercase; }
+  .social-links i {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 34px;
+    text-transform: uppercase; }
 
 body {
   background-color: #ffffff;

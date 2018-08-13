@@ -6,6 +6,6 @@ function closeNav() {
   document.getElementById("Navigation").style.width = "0%";
 }
 
-document.getElementById("form").addEventListener("click", function(event){
+document.getElementById("formButton").addEventListener("click", function(event){
   event.preventDefault()
 });

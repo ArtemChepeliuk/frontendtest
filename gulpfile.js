@@ -29,10 +29,14 @@ gulp.task('sass:watch', function () {
 });
 
 gulp.task('minify-css', () => {
-  return gulp.src('build/*.css')
+    return gulp.src('build/*.css')
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
     .pipe(gulp.dest('dist'));
 });
-gulp.task('start', ['stream', 'callback', 'sass', 'sass:watch', 'minify-css']);
+gulp.task('minify-css:watch', function() {
+  gulp.watch('build/*.css', ['minify-css']);
+});
+
+gulp.task('start', ['stream', 'callback', 'sass', 'sass:watch', 'minify-css', 'minify-css:watch']);
