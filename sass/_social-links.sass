@@ -2,15 +2,26 @@
   width: 100%
   background-color: #7443ff
   text-align: center
+  margin-top: 135px
   background-image: linear-gradient(to right, #93eef9 0%, #7443ff 100%)
   &-elem
     border-right: 1px solid #cccccc
     height: 220px
-  i
-    color: $white-color
-    font-size: 30px
-    font-weight: 400
-    line-height: 34px
-    text-transform: uppercase
-    vertical-align: middle
-  
+    cursor: pointer
+    &:hover &-text
+      visibility: visible
+    &-text
+      visibility: hidden
+      display: block
+      margin-top: 15px
+      color: $white-color
+      font-family: Poppins
+      font-size: 14px
+      font-weight: 400
+      line-height: 24px
+    i
+      color: $white-color
+      font-size: 30px
+      font-weight: 400
+      line-height: 34px
+      text-transform: uppercase

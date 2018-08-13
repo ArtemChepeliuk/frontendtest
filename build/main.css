@@ -538,21 +538,33 @@ menu {
   width: 100%;
   background-color: #7443ff;
   text-align: center;
+  margin-top: 135px;
   background-image: linear-gradient(to right, #93eef9 0%, #7443ff 100%); }
   .social-links-elem {
     border-right: 1px solid #cccccc;
-    height: 220px; }
-  .social-links i {
-    color: #ffffff;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 34px;
-    text-transform: uppercase;
-    vertical-align: middle; }
+    height: 220px;
+    cursor: pointer; }
+    .social-links-elem:hover .social-links-elem-text {
+      visibility: visible; }
+    .social-links-elem-text {
+      visibility: hidden;
+      display: block;
+      margin-top: 15px;
+      color: #ffffff;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px; }
+    .social-links-elem i {
+      color: #ffffff;
+      font-size: 30px;
+      font-weight: 400;
+      line-height: 34px;
+      text-transform: uppercase; }
 
 body {
   background-color: #ffffff;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', "Poppins - Semi Bold", sans-serif;
   text-align: center;
   overflow-x: hidden; }
   body header {
