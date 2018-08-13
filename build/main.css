@@ -356,6 +356,7 @@ menu {
 .section-three {
   background-image: url("../img/pricetable-min.png");
   background-repeat: no-repeat;
+  background-position: center;
   color: #ffffff;
   position: relative;
   margin-top: 150px;
@@ -562,13 +563,12 @@ menu {
   .social-links-elem {
     border-right: 1px solid #cccccc;
     height: 220px;
-    cursor: pointer; }
+    cursor: pointer;
+    flex-direction: column; }
     .social-links-elem:hover .social-links-elem-text {
-      visibility: visible; }
+      display: block; }
     .social-links-elem-text {
-      visibility: hidden;
-      display: block;
-      margin-top: 15px;
+      display: none;
       color: #ffffff;
       font-family: Poppins;
       font-size: 14px;
@@ -581,6 +581,60 @@ menu {
     line-height: 34px;
     text-transform: uppercase; }
 
+footer {
+  padding: 100px  0;
+  border-bottom: 9px solid #14171d;
+  text-align: left; }
+  footer h6 {
+    color: #262b40;
+    font-family: "Poppins";
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.72px;
+    margin: 22px 0 60px; }
+  footer .footer-logo h5 {
+    color: #262b40;
+    font-family: "Poppins";
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -1.04px; }
+  footer .footer-logo img {
+    margin-right: 20px; }
+  footer .footer-copir {
+    margin-top: 40px; }
+    footer .footer-copir span, footer .footer-copir a {
+      color: #72787a;
+      font-family: Poppins;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 30px;
+      text-decoration: none; }
+    footer .footer-copir a:after {
+      content: '.';
+      margin: 0 15px; }
+    footer .footer-copir a:last-child::after {
+      content: ''; }
+  footer input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(102, 102, 102, 0.3);
+    padding: 25px 0 30px; }
+  footer input:focus {
+    outline: 0;
+    border-bottom: 1px solid #7443ff; }
+  footer .footer-email {
+    width: 100%; }
+  footer .footer-icon {
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    margin-top: -51px;
+    position: relative;
+    z-index: 1;
+    float: right;
+    cursor: pointer; }
+
 body {
   background-color: #ffffff;
   font-family: 'Poppins', "Poppins - Semi Bold", sans-serif;
@@ -589,6 +643,7 @@ body {
   body header {
     background-image: url("../img/creative-header-slide-1.jpg");
     background-repeat: no-repeat;
+    background-position: center;
     color: #ffffff;
     position: relative; }
     body header img {
